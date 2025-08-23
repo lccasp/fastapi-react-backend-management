@@ -1,0 +1,26 @@
+# FastAPI核心
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# 数据库相关
+sqlalchemy==2.0.23
+alembic==1.12.1
+asyncpg==0.29.0
+aiosqlite==0.19.0
+
+# 认证相关
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.6
+passlib[bcrypt]==1.7.4
+
+# 缓存
+redis==5.0.1
+
+# 工具库
+python-dotenv==1.0.0
+loguru==0.7.2
+
+# 开发和测试
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
