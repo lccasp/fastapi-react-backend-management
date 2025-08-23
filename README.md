@@ -108,11 +108,11 @@
         │   ├── router.py   # 该模块的API路由
         │   ├── service.py  # 业务逻辑层
         │   └── schema.py   # 该模块专用的Pydantic模型
-        ├── chat            # 聊天模块
-        │   ├── router.py   # 包含HTTP接口和WebSocket接口
+        ├── moudles1        # 新模块
+        │   ├── router.py   
         │   ├── service.py
         │   ├── schema.py
-        │   └── websocket.py# WebSocket连接管理
+        │   
         └── ...             # 其他新模块...
     ```
   * **新增模块流程:**
@@ -129,11 +129,6 @@
     /src
     ├── app                 # Next.js App Router
     │   └── (main)          # 主布局
-    │       ├── chat        # 聊天功能路由组
-    │       │   └── page.tsx
-    │       ├── contacts    # 联系人功能路由组
-    │       │   └── page.tsx
-    │       └── ...
     ├── components          # 全局通用、可复用的UI组件 (基于Shadcn/ui)
     │   ├── ui              # Shadcn/ui 原始组件
     │   └── common          # 自定义封装的通用组件，如 PageHeader, UserAvatar
@@ -142,11 +137,6 @@
     │   │   ├── api.ts      # 调用认证相关API的函数 (使用TanStack Query)
     │   │   ├── components  # 认证专用组件 (如LoginForm)
     │   │   └── store.ts    # 认证相关的Zustand store
-    │   ├── chat            # 聊天模块
-    │   │   ├── api.ts
-    │   │   ├── components  # 如 ChatWindow, MessageList, MessageInput
-    │   │   ├── hooks.ts    # 聊天相关的自定义Hook
-    │   │   └── store.ts
     │   └── ...             # 其他新模块
     ├── hooks               # 全局通用的自定义Hook
     ├── lib                 # 工具函数
@@ -176,8 +166,6 @@
 
   * **功能性需求:**
       * 实现完整的RBAC+部门数据权限系统。
-      * 核心IM功能：私聊、群聊、在线状态、文件/图片传输、消息回撤、已读回执、历史消息加载。
-      * 社交功能：好友管理、用户搜索。
   * **非功能性需求 (架构与技术):**
       * 前后端均采用高度模块化的目录结构，易于扩展。
       * 后端实现声明式的权限校验依赖项。
